@@ -12,6 +12,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    /**
+    CGRect viewBounds = [[UIScreen mainScreen] applicationFrame];
+    viewBounds.origin.y = 10.0;
+    _window = [[UIWindow alloc] initWithFrame:viewBounds];
+    UIView *myView = [[UIView alloc] initWithFrame:viewBounds];
+    UITextView *myTextView = [[UITextView alloc] initWithFrame: viewBounds];
+    myTextView.text = @"hoge";
+    [myView addSubview:myTextView];
+    [_window addSubview:myView];
+    [_window makeKeyAndVisible];
+     **/
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _mainMenuViewController = [[MainMenuViewController alloc] init];
+    _navigationController = [[UINavigationController alloc] initWithRootViewController:_mainMenuViewController];
+    [_window addSubview:_navigationController.view];
+    [_window bringSubviewToFront:_mainMenuViewController.view];
+    
+    //_mainViewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    //_mainViewController = [[MainViewController alloc] init];
+    
+    //_window.rootViewController = _mainViewController;
+    //[_window addSubview:_mainViewController.view];
+    
+    [_window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
