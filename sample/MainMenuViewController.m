@@ -9,6 +9,7 @@
 #import "MainMenuViewController.h"
 #import "SourceViewViewController.h"
 #import "NavBarDemoViewController.h"
+#import "EndOfTheWorldViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -45,5 +46,10 @@
 - (IBAction)tapNavBarDemo:(id)sender {
     NavBarDemoViewController *nbvc = [[NavBarDemoViewController alloc] init];
     [self.navigationController pushViewController:nbvc animated:TRUE];
+}
+
+- (IBAction)tapButtonEndOfTheWorld:(id)sender {
+    EndOfTheWorldViewController *eotw = [[EndOfTheWorldViewController alloc] init];
+    [self.navigationController pushViewController:eotw animated:TRUE];
 }
 @end

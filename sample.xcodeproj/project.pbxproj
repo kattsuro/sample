@@ -11,6 +11,14 @@
 		65795D801994A26900BAD6A1 /* CopyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */; };
 		65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */; };
 		65795D821994A26900BAD6A1 /* CopyRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */; };
+		65795D861994B86C00BAD6A1 /* EndOfTheWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D841994B86C00BAD6A1 /* EndOfTheWorldViewController.m */; };
+		65795D871994B86C00BAD6A1 /* EndOfTheWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D841994B86C00BAD6A1 /* EndOfTheWorldViewController.m */; };
+		65795D881994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D851994B86C00BAD6A1 /* EndOfTheWorldViewController.xib */; };
+		65795D891994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D851994B86C00BAD6A1 /* EndOfTheWorldViewController.xib */; };
+		65795D8D1994C62A00BAD6A1 /* myTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D8B1994C62A00BAD6A1 /* myTableViewController.m */; };
+		65795D8E1994C62A00BAD6A1 /* myTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D8B1994C62A00BAD6A1 /* myTableViewController.m */; };
+		65795D8F1994C62A00BAD6A1 /* myTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D8C1994C62A00BAD6A1 /* myTableViewController.xib */; };
+		65795D901994C62A00BAD6A1 /* myTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D8C1994C62A00BAD6A1 /* myTableViewController.xib */; };
 		657B7BB71993119100006A4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657B7BB61993119100006A4C /* Foundation.framework */; };
 		657B7BB91993119100006A4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657B7BB81993119100006A4C /* CoreGraphics.framework */; };
 		657B7BBB1993119100006A4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657B7BBA1993119100006A4C /* UIKit.framework */; };
@@ -55,6 +63,12 @@
 		65795D7C1994A26900BAD6A1 /* CopyRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyRightViewController.h; sourceTree = "<group>"; };
 		65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyRightViewController.m; sourceTree = "<group>"; };
 		65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyRightViewController.xib; sourceTree = "<group>"; };
+		65795D831994B86C00BAD6A1 /* EndOfTheWorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndOfTheWorldViewController.h; sourceTree = "<group>"; };
+		65795D841994B86C00BAD6A1 /* EndOfTheWorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndOfTheWorldViewController.m; sourceTree = "<group>"; };
+		65795D851994B86C00BAD6A1 /* EndOfTheWorldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndOfTheWorldViewController.xib; sourceTree = "<group>"; };
+		65795D8A1994C62A00BAD6A1 /* myTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTableViewController.h; sourceTree = "<group>"; };
+		65795D8B1994C62A00BAD6A1 /* myTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTableViewController.m; sourceTree = "<group>"; };
+		65795D8C1994C62A00BAD6A1 /* myTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myTableViewController.xib; sourceTree = "<group>"; };
 		657B7BB31993119100006A4C /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657B7BB61993119100006A4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		657B7BB81993119100006A4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +175,12 @@
 				65795D7C1994A26900BAD6A1 /* CopyRightViewController.h */,
 				65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */,
 				65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */,
+				65795D831994B86C00BAD6A1 /* EndOfTheWorldViewController.h */,
+				65795D841994B86C00BAD6A1 /* EndOfTheWorldViewController.m */,
+				65795D851994B86C00BAD6A1 /* EndOfTheWorldViewController.xib */,
+				65795D8A1994C62A00BAD6A1 /* myTableViewController.h */,
+				65795D8B1994C62A00BAD6A1 /* myTableViewController.m */,
+				65795D8C1994C62A00BAD6A1 /* myTableViewController.xib */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -270,10 +290,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65795D8F1994C62A00BAD6A1 /* myTableViewController.xib in Resources */,
 				657B7BF719934A2D00006A4C /* SourceViewViewController.xib in Resources */,
 				657B7C05199378EC00006A4C /* NavBarDemoViewController.xib in Resources */,
 				657B7BCF1993119100006A4C /* Images.xcassets in Resources */,
 				65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
+				65795D881994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */,
 				657B7BF01993168300006A4C /* MainViewController.xib in Resources */,
 				657B7BFE1993697400006A4C /* MainMenuViewController.xib in Resources */,
 				657B7BC11993119100006A4C /* InfoPlist.strings in Resources */,
@@ -286,10 +308,12 @@
 			files = (
 				657B7BFF1993697400006A4C /* MainMenuViewController.xib in Resources */,
 				657B7C06199378EC00006A4C /* NavBarDemoViewController.xib in Resources */,
+				65795D891994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */,
 				65795D821994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
 				657B7BF819934A2D00006A4C /* SourceViewViewController.xib in Resources */,
 				657B7BE01993119100006A4C /* InfoPlist.strings in Resources */,
 				657B7BF11993168300006A4C /* MainViewController.xib in Resources */,
+				65795D901994C62A00BAD6A1 /* myTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +328,11 @@
 				657B7C03199378EC00006A4C /* NavBarDemoViewController.m in Sources */,
 				657B7BC71993119100006A4C /* AppDelegate.m in Sources */,
 				657B7BEE1993168300006A4C /* MainViewController.m in Sources */,
+				65795D861994B86C00BAD6A1 /* EndOfTheWorldViewController.m in Sources */,
 				657B7BC31993119100006A4C /* main.m in Sources */,
 				65795D7F1994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
 				657B7BFC1993697400006A4C /* MainMenuViewController.m in Sources */,
+				65795D8D1994C62A00BAD6A1 /* myTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +345,9 @@
 				657B7C04199378EC00006A4C /* NavBarDemoViewController.m in Sources */,
 				657B7BF619934A2D00006A4C /* SourceViewViewController.m in Sources */,
 				657B7BE21993119100006A4C /* sampleTests.m in Sources */,
+				65795D871994B86C00BAD6A1 /* EndOfTheWorldViewController.m in Sources */,
 				657B7BEF1993168300006A4C /* MainViewController.m in Sources */,
+				65795D8E1994C62A00BAD6A1 /* myTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -417,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

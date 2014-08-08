@@ -11,5 +11,6 @@
 @interface MainMenuViewController : UIViewController
 - (IBAction)tapButtonSourveView:(id)sender;
 - (IBAction)tapNavBarDemo:(id)sender;
+- (IBAction)tapButtonEndOfTheWorld:(id)sender;
 
 @end
