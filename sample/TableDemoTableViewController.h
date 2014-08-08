@@ -1,5 +1,5 @@
 //
-//  myTableViewController.h
+//  TableDemoTableViewController.h
 //  sample
 //
 //  Created by 桜井 克朗 on 2014/08/08.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface myTableViewController : UITableViewController
+@interface TableDemoTableViewController : UITableViewController
 
 @end

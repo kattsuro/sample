@@ -1,18 +1,18 @@
 //
-//  myTableViewController.m
+//  TableDemoTableViewController.m
 //  sample
 //
 //  Created by 桜井 克朗 on 2014/08/08.
 //  Copyright (c) 2014年 桜井 克朗. All rights reserved.
 //
 
-#import "myTableViewController.h"
+#import "TableDemoTableViewController.h"
 
-@interface myTableViewController ()
+@interface TableDemoTableViewController ()
 
 @end
 
-@implementation myTableViewController
+@implementation TableDemoTableViewController
 
 - (void)viewDidLoad
 {
@@ -35,12 +35,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
