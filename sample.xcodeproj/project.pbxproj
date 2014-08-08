@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65795D7F1994A26900BAD6A1 /* CopyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */; };
+		65795D801994A26900BAD6A1 /* CopyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */; };
+		65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */; };
+		65795D821994A26900BAD6A1 /* CopyRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */; };
 		657B7BB71993119100006A4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657B7BB61993119100006A4C /* Foundation.framework */; };
 		657B7BB91993119100006A4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657B7BB81993119100006A4C /* CoreGraphics.framework */; };
 		657B7BBB1993119100006A4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 657B7BBA1993119100006A4C /* UIKit.framework */; };
@@ -48,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65795D7C1994A26900BAD6A1 /* CopyRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyRightViewController.h; sourceTree = "<group>"; };
+		65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyRightViewController.m; sourceTree = "<group>"; };
+		65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyRightViewController.xib; sourceTree = "<group>"; };
 		657B7BB31993119100006A4C /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657B7BB61993119100006A4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		657B7BB81993119100006A4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +158,9 @@
 				657B7C00199378EC00006A4C /* NavBarDemoViewController.h */,
 				657B7C01199378EC00006A4C /* NavBarDemoViewController.m */,
 				657B7C02199378EC00006A4C /* NavBarDemoViewController.xib */,
+				65795D7C1994A26900BAD6A1 /* CopyRightViewController.h */,
+				65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */,
+				65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -263,6 +273,7 @@
 				657B7BF719934A2D00006A4C /* SourceViewViewController.xib in Resources */,
 				657B7C05199378EC00006A4C /* NavBarDemoViewController.xib in Resources */,
 				657B7BCF1993119100006A4C /* Images.xcassets in Resources */,
+				65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
 				657B7BF01993168300006A4C /* MainViewController.xib in Resources */,
 				657B7BFE1993697400006A4C /* MainMenuViewController.xib in Resources */,
 				657B7BC11993119100006A4C /* InfoPlist.strings in Resources */,
@@ -275,6 +286,7 @@
 			files = (
 				657B7BFF1993697400006A4C /* MainMenuViewController.xib in Resources */,
 				657B7C06199378EC00006A4C /* NavBarDemoViewController.xib in Resources */,
+				65795D821994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
 				657B7BF819934A2D00006A4C /* SourceViewViewController.xib in Resources */,
 				657B7BE01993119100006A4C /* InfoPlist.strings in Resources */,
 				657B7BF11993168300006A4C /* MainViewController.xib in Resources */,
@@ -293,6 +305,7 @@
 				657B7BC71993119100006A4C /* AppDelegate.m in Sources */,
 				657B7BEE1993168300006A4C /* MainViewController.m in Sources */,
 				657B7BC31993119100006A4C /* main.m in Sources */,
+				65795D7F1994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
 				657B7BFC1993697400006A4C /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65795D801994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
 				657B7BFD1993697400006A4C /* MainMenuViewController.m in Sources */,
 				657B7C04199378EC00006A4C /* NavBarDemoViewController.m in Sources */,
 				657B7BF619934A2D00006A4C /* SourceViewViewController.m in Sources */,
@@ -494,6 +508,7 @@
 				657B7BE71993119100006A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		657B7BE81993119100006A4C /* Build configuration list for PBXNativeTarget "sampleTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +517,7 @@
 				657B7BEA1993119100006A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

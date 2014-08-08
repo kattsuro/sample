@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface NavBarDemoViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
