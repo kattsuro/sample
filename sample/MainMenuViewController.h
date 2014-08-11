@@ -12,5 +12,6 @@
 - (IBAction)tapButtonSourveView:(id)sender;
 - (IBAction)tapNavBarDemo:(id)sender;
 - (IBAction)tapButtonEndOfTheWorld:(id)sender;
+- (IBAction)tapButtonTableDemo:(id)sender;
 
 @end

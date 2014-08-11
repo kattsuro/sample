@@ -14,15 +14,40 @@
 
 @implementation TableDemoTableViewController
 
+- (void)startEditing
+{
+    [self.tableView setEditing:YES animated:YES];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(stopEditing)];
+}
+
+- (void)stopEditing
+{
+    [self.tableView setEditing:NO animated:YES];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(startEditing)];
+}
+
+-(void)reload
+{
+    NSDirectoryEnumerator *dirEnum;
+    NSString *file;
+    
+    _fileList = [[NSMutableArray alloc] init];
+    dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:NSHomeDirectory()];
+    while ((file = [dirEnum nextObject])) {
+        [_fileList addObject:file];
+    }
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self reload];
+    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(startEditing)];
+    UIBarButtonItem *reload = [[UIBarButtonItem alloc] initWithTitle:@"再読込" style:UIBarButtonItemStylePlain target:self action:@selector(reload)];
+    //UIBarButtonItem *back = self.navigationItem.backBarButtonItem;
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:edit,reload, nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,28 +60,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return _fileList.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    NSString *cellIdentifier = [_fileList objectAtIndex:[indexPath indexAtPosition:1]];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.textLabel.text = cellIdentifier;
+        UIFont *font = [UIFont fontWithName:@"Courier" size:12.0];
+        cell.textLabel.font = font;
+    }
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -67,18 +93,23 @@
 }
 */
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        // データソースからセルを消去
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        for (int i=0; i < _fileList.count; i++) {
+            if ([cell.textLabel.text isEqualToString:[_fileList objectAtIndex:i]]) {
+                [_fileList removeObjectAtIndex:i];
+            }
+        }
+        // テーブルからセルを消去
+        NSMutableArray *array = [[NSMutableArray alloc] init];
+        [array addObject:indexPath];
+        [self.tableView deleteRowsAtIndexPaths:array withRowAnimation:UITableViewRowAnimationTop];
+    }
 }
-*/
 
 /*
 // Override to support rearranging the table view.
@@ -96,21 +127,15 @@
 }
 */
 
-/*
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ファイルの選択" message:[NSString stringWithFormat:@"ファイル'%@'が選択されました", cell.textLabel.text] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    [alert show];
 }
-*/
 
 @end

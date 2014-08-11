@@ -10,4 +10,10 @@
 
 @interface TableDemoTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *fileList;
+
+- (void)startEditing;
+- (void)stopEditing;
+- (void)reload;
+
 @end

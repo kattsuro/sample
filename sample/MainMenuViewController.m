@@ -10,6 +10,7 @@
 #import "SourceViewViewController.h"
 #import "NavBarDemoViewController.h"
 #import "EndOfTheWorldViewController.h"
+#import "TableDemoTableViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -40,16 +41,21 @@
 
 - (IBAction)tapButtonSourveView:(id)sender {
     SourceViewViewController *svvc = [[SourceViewViewController alloc] init];
-    [self.navigationController pushViewController:svvc animated:TRUE];
+    [self.navigationController pushViewController:svvc animated:YES];
 }
 
 - (IBAction)tapNavBarDemo:(id)sender {
     NavBarDemoViewController *nbvc = [[NavBarDemoViewController alloc] init];
-    [self.navigationController pushViewController:nbvc animated:TRUE];
+    [self.navigationController pushViewController:nbvc animated:YES];
 }
 
 - (IBAction)tapButtonEndOfTheWorld:(id)sender {
     EndOfTheWorldViewController *eotw = [[EndOfTheWorldViewController alloc] init];
-    [self.navigationController pushViewController:eotw animated:TRUE];
+    [self.navigationController pushViewController:eotw animated:YES];
+}
+
+- (IBAction)tapButtonTableDemo:(id)sender {
+    TableDemoTableViewController *tdtvc = [[TableDemoTableViewController alloc] init];
+    [self.navigationController pushViewController:tdtvc animated:YES];
 }
 @end
