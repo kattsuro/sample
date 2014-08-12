@@ -8,7 +8,9 @@
 
 #import "TableDemoTableViewController.h"
 
-@interface TableDemoTableViewController ()
+@interface TableDemoTableViewController (){
+    NSMutableArray *contentsDirectory;
+}
 
 @end
 
@@ -28,26 +30,66 @@
 
 -(void)reload
 {
+    
+    //_fileList = [[NSMutableArray alloc] init];
+    // sample with enumeratorAtPath:NSHomeDirectory
+    /**
     NSDirectoryEnumerator *dirEnum;
     NSString *file;
-    
-    _fileList = [[NSMutableArray alloc] init];
     dirEnum = [[NSFileManager defaultManager] enumeratorAtPath:NSHomeDirectory()];
     while ((file = [dirEnum nextObject])) {
-        [_fileList addObject:file];
+        NSDictionary *dir = [dirEnum fileAttributes];
+        NSMutableDictionary *mdir = [dir mutableCopy];
+        mdir[@"file_name"] = file;
+        if ([[dir objectForKey:NSFileType] isEqualToString:NSFileTypeDirectory]) {
+            NSLog(@"%@", file);
+        }
+        //NSDictionary *files = [NSDictionary dictionaryWithObjectsAndKeys:file, dir, nil];
+        [_fileList addObject:mdir];
+    }
+     **/
+    /**
+    NSArray *dirArr;
+    dirArr = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self.fm currentDirectoryPath] error:nil];
+    for (NSString *file in dirArr) {
+        NSDictionary *attr = [[NSFileManager defaultManager] attributesOfItemAtPath:[self.fm currentDirectoryPath] error:nil];
+        NSMutableDictionary *mattr = [attr mutableCopy];
+        mattr[@"file_name"] = file;
+        [_fileList addObject:mattr];
     }
     [self.tableView reloadData];
+     **/
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self reload];
+   
+    /** buttons **/
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(startEditing)];
     UIBarButtonItem *reload = [[UIBarButtonItem alloc] initWithTitle:@"再読込" style:UIBarButtonItemStylePlain target:self action:@selector(reload)];
     //UIBarButtonItem *back = self.navigationItem.backBarButtonItem;
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:edit,reload, nil];
+    
+    /** filemanager **/
+    if (self.fm == nil) {
+        _fm = [NSFileManager defaultManager];
+    }
+    NSString *currentPath = [self.fm currentDirectoryPath];
+    contentsDirectory = [[self.fm contentsOfDirectoryAtPath: currentPath error: nil] mutableCopy];
+    //[self reload];
+    
+    NSLog(@"%@", [self.fm currentDirectoryPath]);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+    if (self.isPoped)
+    {
+        [self.fm changeCurrentDirectoryPath: self.previousPath];
+        self.isPoped = NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,19 +109,23 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return _fileList.count;
+    return contentsDirectory.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *cellIdentifier = [_fileList objectAtIndex:[indexPath indexAtPosition:1]];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-
+    int row = [indexPath row];
+    NSString *content = [contentsDirectory objectAtIndex: [indexPath row]];
+    NSDictionary *attr = [self.fm attributesOfItemAtPath:content error:nil];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:content];
+    
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.textLabel.text = cellIdentifier;
-        UIFont *font = [UIFont fontWithName:@"Courier" size:12.0];
-        cell.textLabel.font = font;
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:content];
+        cell.textLabel.text = [contentsDirectory objectAtIndex: row];
+    }
+    if (attr[NSFileType] == NSFileTypeDirectory) {
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     return cell;
 }
@@ -99,9 +145,9 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // データソースからセルを消去
         UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        for (int i=0; i < _fileList.count; i++) {
-            if ([cell.textLabel.text isEqualToString:[_fileList objectAtIndex:i]]) {
-                [_fileList removeObjectAtIndex:i];
+        for (int i=0; i < contentsDirectory.count; i++) {
+            if ([cell.textLabel.text isEqualToString:[contentsDirectory objectAtIndex:i]]) {
+                [contentsDirectory removeObjectAtIndex:i];
             }
         }
         // テーブルからセルを消去
@@ -133,9 +179,41 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ファイルの選択" message:[NSString stringWithFormat:@"ファイル'%@'が選択されました", cell.textLabel.text] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
-    [alert show];
+    NSString *content = [contentsDirectory objectAtIndex: [indexPath row]];
+    NSDictionary *attr = [self.fm attributesOfItemAtPath:content error:nil];
+    
+    //[self setCurrentPath:attributes[@"file_name"]];
+    if (attr[NSFileType] == NSFileTypeDirectory) {
+        // navigate
+        TableDemoTableViewController *tdtvc = [[TableDemoTableViewController alloc] init];
+        tdtvc.title = [self.fm currentDirectoryPath];
+        tdtvc.fm = self.fm;
+
+        
+        [self.navigationController pushViewController: tdtvc animated: YES];
+        self.previousPath = [self.fm currentDirectoryPath];
+        self.isPoped = YES;
+        [self.fm changeCurrentDirectoryPath:content];
+    } else if (attr[NSFileType] == NSFileTypeRegular) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"ファイルの選択" message:[NSString stringWithFormat:@"ファイル'%@'が選択されました", content] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        [alert show];
+    }
 }
+
+- (void)updateNavigation
+{
+    _segmentedControl = [[UISegmentedControl alloc] initWithItems:nil];
+    //segmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
+    [_segmentedControl insertSegmentWithTitle:@"ウサギ" atIndex:0 animated:NO];
+    //[_segmentedControl addTarget:self action:@selector(controllPressed:) forControlEvents:UIControlEventValueChanged];
+    self.navigationItem.titleView = _segmentedControl;
+}
+
+/**
+- (NSString)getValidCurrentPath
+{
+    
+}
+ **/
 
 @end
