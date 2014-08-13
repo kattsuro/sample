@@ -13,5 +13,6 @@
 - (IBAction)tapNavBarDemo:(id)sender;
 - (IBAction)tapButtonEndOfTheWorld:(id)sender;
 - (IBAction)tapButtonTableDemo:(id)sender;
+- (IBAction)tapButtonTouchDemo:(id)sender;
 
 @end

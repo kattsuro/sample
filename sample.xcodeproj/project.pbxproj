@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651E0EBE199AFF70003514EA /* TouchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651E0EBC199AFF70003514EA /* TouchDemoViewController.m */; };
+		651E0EBF199AFF70003514EA /* TouchDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 651E0EBC199AFF70003514EA /* TouchDemoViewController.m */; };
+		651E0EC0199AFF70003514EA /* TouchDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651E0EBD199AFF70003514EA /* TouchDemoViewController.xib */; };
+		651E0EC1199AFF70003514EA /* TouchDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 651E0EBD199AFF70003514EA /* TouchDemoViewController.xib */; };
 		65795D7F1994A26900BAD6A1 /* CopyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */; };
 		65795D801994A26900BAD6A1 /* CopyRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */; };
 		65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */; };
@@ -60,6 +64,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		651E0EBB199AFF70003514EA /* TouchDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchDemoViewController.h; sourceTree = "<group>"; };
+		651E0EBC199AFF70003514EA /* TouchDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouchDemoViewController.m; sourceTree = "<group>"; };
+		651E0EBD199AFF70003514EA /* TouchDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouchDemoViewController.xib; sourceTree = "<group>"; };
 		65795D7C1994A26900BAD6A1 /* CopyRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CopyRightViewController.h; sourceTree = "<group>"; };
 		65795D7D1994A26900BAD6A1 /* CopyRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CopyRightViewController.m; sourceTree = "<group>"; };
 		65795D7E1994A26900BAD6A1 /* CopyRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CopyRightViewController.xib; sourceTree = "<group>"; };
@@ -181,6 +188,9 @@
 				65795D911994D33F00BAD6A1 /* TableDemoTableViewController.h */,
 				65795D921994D33F00BAD6A1 /* TableDemoTableViewController.m */,
 				65795D931994D33F00BAD6A1 /* TableDemoTableViewController.xib */,
+				651E0EBB199AFF70003514EA /* TouchDemoViewController.h */,
+				651E0EBC199AFF70003514EA /* TouchDemoViewController.m */,
+				651E0EBD199AFF70003514EA /* TouchDemoViewController.xib */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -297,6 +307,7 @@
 				65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
 				65795D881994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */,
 				657B7BF01993168300006A4C /* MainViewController.xib in Resources */,
+				651E0EC0199AFF70003514EA /* TouchDemoViewController.xib in Resources */,
 				657B7BFE1993697400006A4C /* MainMenuViewController.xib in Resources */,
 				657B7BC11993119100006A4C /* InfoPlist.strings in Resources */,
 			);
@@ -312,6 +323,7 @@
 				65795D891994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */,
 				65795D821994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
 				657B7BF819934A2D00006A4C /* SourceViewViewController.xib in Resources */,
+				651E0EC1199AFF70003514EA /* TouchDemoViewController.xib in Resources */,
 				657B7BE01993119100006A4C /* InfoPlist.strings in Resources */,
 				657B7BF11993168300006A4C /* MainViewController.xib in Resources */,
 			);
@@ -329,6 +341,7 @@
 				657B7C03199378EC00006A4C /* NavBarDemoViewController.m in Sources */,
 				657B7BC71993119100006A4C /* AppDelegate.m in Sources */,
 				657B7BEE1993168300006A4C /* MainViewController.m in Sources */,
+				651E0EBE199AFF70003514EA /* TouchDemoViewController.m in Sources */,
 				65795D861994B86C00BAD6A1 /* EndOfTheWorldViewController.m in Sources */,
 				657B7BC31993119100006A4C /* main.m in Sources */,
 				65795D7F1994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
@@ -340,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651E0EBF199AFF70003514EA /* TouchDemoViewController.m in Sources */,
 				65795D801994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
 				657B7BFD1993697400006A4C /* MainMenuViewController.m in Sources */,
 				657B7C04199378EC00006A4C /* NavBarDemoViewController.m in Sources */,

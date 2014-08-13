@@ -11,6 +11,7 @@
 #import "NavBarDemoViewController.h"
 #import "EndOfTheWorldViewController.h"
 #import "TableDemoTableViewController.h"
+#import "TouchDemoViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -30,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //[UIApplication sharedApplication].applicationIconBadgeNumber = 0;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -57,5 +59,10 @@
 - (IBAction)tapButtonTableDemo:(id)sender {
     TableDemoTableViewController *tdtvc = [[TableDemoTableViewController alloc] init];
     [self.navigationController pushViewController:tdtvc animated:YES];
+}
+
+- (IBAction)tapButtonTouchDemo:(id)sender {
+    TouchDemoViewController *tdvc = [[TouchDemoViewController alloc] init];
+    [self.navigationController pushViewController:tdvc animated:YES];
 }
 @end

@@ -30,6 +30,9 @@
 
 -(void)reload
 {
+    NSString *currentPath = [self.fm currentDirectoryPath];
+    contentsDirectory = [[self.fm contentsOfDirectoryAtPath: currentPath error: nil] mutableCopy];
+    [self.tableView reloadData];
     
     //_fileList = [[NSMutableArray alloc] init];
     // sample with enumeratorAtPath:NSHomeDirectory
