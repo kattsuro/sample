@@ -51,6 +51,14 @@
 		657B7C04199378EC00006A4C /* NavBarDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 657B7C01199378EC00006A4C /* NavBarDemoViewController.m */; };
 		657B7C05199378EC00006A4C /* NavBarDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657B7C02199378EC00006A4C /* NavBarDemoViewController.xib */; };
 		657B7C06199378EC00006A4C /* NavBarDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657B7C02199378EC00006A4C /* NavBarDemoViewController.xib */; };
+		659219D9199C9E09000787ED /* ShootStuffUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659219D7199C9E09000787ED /* ShootStuffUpTableViewController.m */; };
+		659219DA199C9E09000787ED /* ShootStuffUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659219D7199C9E09000787ED /* ShootStuffUpTableViewController.m */; };
+		659219DB199C9E09000787ED /* ShootStuffUpTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659219D8199C9E09000787ED /* ShootStuffUpTableViewController.xib */; };
+		659219DC199C9E09000787ED /* ShootStuffUpTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659219D8199C9E09000787ED /* ShootStuffUpTableViewController.xib */; };
+		659219E0199CB2B2000787ED /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659219DE199CB2B2000787ED /* WebViewViewController.m */; };
+		659219E1199CB2B2000787ED /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659219DE199CB2B2000787ED /* WebViewViewController.m */; };
+		659219E2199CB2B2000787ED /* WebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659219DF199CB2B2000787ED /* WebViewViewController.xib */; };
+		659219E3199CB2B2000787ED /* WebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659219DF199CB2B2000787ED /* WebViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +112,12 @@
 		657B7C00199378EC00006A4C /* NavBarDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavBarDemoViewController.h; sourceTree = "<group>"; };
 		657B7C01199378EC00006A4C /* NavBarDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavBarDemoViewController.m; sourceTree = "<group>"; };
 		657B7C02199378EC00006A4C /* NavBarDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavBarDemoViewController.xib; sourceTree = "<group>"; };
+		659219D6199C9E09000787ED /* ShootStuffUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShootStuffUpTableViewController.h; sourceTree = "<group>"; };
+		659219D7199C9E09000787ED /* ShootStuffUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShootStuffUpTableViewController.m; sourceTree = "<group>"; };
+		659219D8199C9E09000787ED /* ShootStuffUpTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShootStuffUpTableViewController.xib; sourceTree = "<group>"; };
+		659219DD199CB2B2000787ED /* WebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewViewController.h; sourceTree = "<group>"; };
+		659219DE199CB2B2000787ED /* WebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewViewController.m; sourceTree = "<group>"; };
+		659219DF199CB2B2000787ED /* WebViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +205,12 @@
 				651E0EBB199AFF70003514EA /* TouchDemoViewController.h */,
 				651E0EBC199AFF70003514EA /* TouchDemoViewController.m */,
 				651E0EBD199AFF70003514EA /* TouchDemoViewController.xib */,
+				659219D6199C9E09000787ED /* ShootStuffUpTableViewController.h */,
+				659219D7199C9E09000787ED /* ShootStuffUpTableViewController.m */,
+				659219D8199C9E09000787ED /* ShootStuffUpTableViewController.xib */,
+				659219DD199CB2B2000787ED /* WebViewViewController.h */,
+				659219DE199CB2B2000787ED /* WebViewViewController.m */,
+				659219DF199CB2B2000787ED /* WebViewViewController.xib */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -300,11 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659219DB199C9E09000787ED /* ShootStuffUpTableViewController.xib in Resources */,
 				657B7BF719934A2D00006A4C /* SourceViewViewController.xib in Resources */,
 				657B7C05199378EC00006A4C /* NavBarDemoViewController.xib in Resources */,
 				65795D961994D33F00BAD6A1 /* TableDemoTableViewController.xib in Resources */,
 				657B7BCF1993119100006A4C /* Images.xcassets in Resources */,
 				65795D811994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
+				659219E2199CB2B2000787ED /* WebViewViewController.xib in Resources */,
 				65795D881994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */,
 				657B7BF01993168300006A4C /* MainViewController.xib in Resources */,
 				651E0EC0199AFF70003514EA /* TouchDemoViewController.xib in Resources */,
@@ -321,9 +343,11 @@
 				657B7C06199378EC00006A4C /* NavBarDemoViewController.xib in Resources */,
 				65795D971994D33F00BAD6A1 /* TableDemoTableViewController.xib in Resources */,
 				65795D891994B86C00BAD6A1 /* EndOfTheWorldViewController.xib in Resources */,
+				659219E3199CB2B2000787ED /* WebViewViewController.xib in Resources */,
 				65795D821994A26900BAD6A1 /* CopyRightViewController.xib in Resources */,
 				657B7BF819934A2D00006A4C /* SourceViewViewController.xib in Resources */,
 				651E0EC1199AFF70003514EA /* TouchDemoViewController.xib in Resources */,
+				659219DC199C9E09000787ED /* ShootStuffUpTableViewController.xib in Resources */,
 				657B7BE01993119100006A4C /* InfoPlist.strings in Resources */,
 				657B7BF11993168300006A4C /* MainViewController.xib in Resources */,
 			);
@@ -342,6 +366,8 @@
 				657B7BC71993119100006A4C /* AppDelegate.m in Sources */,
 				657B7BEE1993168300006A4C /* MainViewController.m in Sources */,
 				651E0EBE199AFF70003514EA /* TouchDemoViewController.m in Sources */,
+				659219E0199CB2B2000787ED /* WebViewViewController.m in Sources */,
+				659219D9199C9E09000787ED /* ShootStuffUpTableViewController.m in Sources */,
 				65795D861994B86C00BAD6A1 /* EndOfTheWorldViewController.m in Sources */,
 				657B7BC31993119100006A4C /* main.m in Sources */,
 				65795D7F1994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
@@ -355,7 +381,9 @@
 			files = (
 				651E0EBF199AFF70003514EA /* TouchDemoViewController.m in Sources */,
 				65795D801994A26900BAD6A1 /* CopyRightViewController.m in Sources */,
+				659219E1199CB2B2000787ED /* WebViewViewController.m in Sources */,
 				657B7BFD1993697400006A4C /* MainMenuViewController.m in Sources */,
+				659219DA199C9E09000787ED /* ShootStuffUpTableViewController.m in Sources */,
 				657B7C04199378EC00006A4C /* NavBarDemoViewController.m in Sources */,
 				657B7BF619934A2D00006A4C /* SourceViewViewController.m in Sources */,
 				657B7BE21993119100006A4C /* sampleTests.m in Sources */,

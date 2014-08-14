@@ -12,6 +12,8 @@
 #import "EndOfTheWorldViewController.h"
 #import "TableDemoTableViewController.h"
 #import "TouchDemoViewController.h"
+#import "ShootStuffUpTableViewController.h"
+#import "WebViewViewController.h"
 
 @interface MainMenuViewController ()
 
@@ -64,5 +66,15 @@
 - (IBAction)tapButtonTouchDemo:(id)sender {
     TouchDemoViewController *tdvc = [[TouchDemoViewController alloc] init];
     [self.navigationController pushViewController:tdvc animated:YES];
+}
+
+- (IBAction)tapButtonShoot:(id)sender {
+    ShootStuffUpTableViewController *ssutvc = [[ShootStuffUpTableViewController alloc] init];
+    [self.navigationController pushViewController:ssutvc animated:YES];
+}
+
+- (IBAction)tapButtonWebView:(id)sender {
+    WebViewViewController *wbvc = [[WebViewViewController alloc] init];
+    [self.navigationController pushViewController:wbvc animated:YES];
 }
 @end

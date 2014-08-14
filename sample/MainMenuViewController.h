@@ -14,5 +14,7 @@
 - (IBAction)tapButtonEndOfTheWorld:(id)sender;
 - (IBAction)tapButtonTableDemo:(id)sender;
 - (IBAction)tapButtonTouchDemo:(id)sender;
+- (IBAction)tapButtonShoot:(id)sender;
+- (IBAction)tapButtonWebView:(id)sender;
 
 @end
